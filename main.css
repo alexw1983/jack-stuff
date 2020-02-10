@@ -11,3 +11,6 @@
     width: 100px;
     float: left;
 }
+.box:hover {
+    background-color: green;
+    cursor: pointer;}
