@@ -1,3 +1,7 @@
+body {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
 .grid {
   margin: 0 auto;
   border: 1px solid black;
@@ -10,9 +14,11 @@
   height: 100px;
   width: 100px;
   float: left;
+  text-align: center;
+  font-size: 76px;
 }
 
 .box:hover {
-  background-color: green;
+  background-color: aqua;
   cursor: pointer;
 }
