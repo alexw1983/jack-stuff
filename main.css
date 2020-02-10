@@ -1,16 +1,18 @@
-.grid{
-    margin: 0 auto;
-    border: 1px solid black;
-    width: 306px;
-    height: 306px;
+.grid {
+  margin: 0 auto;
+  border: 1px solid black;
+  width: 306px;
+  height: 306px;
 }
 
 .box {
-    border: 1px solid black;
-    height: 100px;
-    width: 100px;
-    float: left;
+  border: 1px solid black;
+  height: 100px;
+  width: 100px;
+  float: left;
 }
+
 .box:hover {
-    background-color: green;
-    cursor: pointer;}
+  background-color: green;
+  cursor: pointer;
+}
