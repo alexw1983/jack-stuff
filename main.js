@@ -1,9 +1,13 @@
 var currentTurn = "X";
 
 function handleBoxClick(box) {
+  if (box.innerHTML != "") {
+    return;
+  }
+  
   box.innerHTML = currentTurn;
- 
-   if (currentTurn == "X") {
+
+  if (currentTurn == "X") {
     currentTurn = "O";
   } else {
     currentTurn = "X";
