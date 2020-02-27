@@ -1,0 +1,45 @@
+body {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+button {
+    background-color: green;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5em;
+    border: 1px solid green;
+    margin: 1rem auto;
+    font-size: 1.5rem;
+    display: block;
+    cursor: pointer;
+}
+
+#Grid {
+    margin: 0 auto;
+    border: 1px solid black;
+    width: 306px;
+    height: 306px;
+}
+
+#Banner {
+    text-align: center;
+    color: Green;
+}
+
+.box {
+    border: 1px solid black;
+    height: 100px;
+    width: 100px;
+    float: left;
+    text-align: center;
+    font-size: 76px;
+}
+
+.box-hover:hover {
+    background-color: aqua;
+    cursor: pointer;
+}
+
+.winner {
+    background-color: green;
+}
