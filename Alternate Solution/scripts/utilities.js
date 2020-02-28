@@ -23,7 +23,6 @@ const findMatchingLine = (board, val) => {
     return null;
 }
 
-
 const pickAnAvailableSquare = (board) => {
 
     const available = board.reduce((acc, curr, idx) => {

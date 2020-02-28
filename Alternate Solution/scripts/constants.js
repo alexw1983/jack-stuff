@@ -4,6 +4,12 @@ const NO_MODE = "";
 const ONE_PLAYER_MODE = "1";
 const TWO_PLAYER_MODE = "2";
 
+const INTIAL_STATE = {
+    mode: NO_MODE,
+    currentTurn: X,
+    board: new Array(9).fill("")
+}
+
 const CORNERS = [0, 2, 6, 8];
 
 const WINNING_LINES = [

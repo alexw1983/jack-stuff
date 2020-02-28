@@ -1,19 +1,25 @@
 
-const initialState = {
-    mode: NO_MODE,
-    currentTurn: X,
-    board: new Array(9).fill("")
-}
-
 const selectMode = () => {
-    setState({ mode: document.getElementById("ModeSelect").value });
+    const newMode = document.getElementById("ModeSelect").value;
+    showMessage("New Game");
+    updateMode(newMode);
+
+    const rand = [0, 1][Math.floor(Math.random() * 2)];
+    const newTurn = rand == 0 ? X : O;
+
+    setState({ currentTurn: newTurn });
+
+    if (newMode == ONE_PLAYER_MODE) {
+        runAiTurn();
+        switchTurn();
+    }
+
     render();
 }
 
 const resetGrid = () => {
     document.getElementById("ModeSelect").selectedIndex = 0;
-    clearState();
-    setState(initialState);
+    resetState();
     render();
 }
 

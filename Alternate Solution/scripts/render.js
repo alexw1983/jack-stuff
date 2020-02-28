@@ -1,7 +1,11 @@
 const render = () => {
     const currentState = getState();
     toggleBoard(currentState.mode);
-    showMessage("Current Turn = " + currentState.currentTurn);
+
+    if (getCurrentMode() == TWO_PLAYER_MODE) {
+        showMessage("Current Turn = " + currentState.currentTurn);
+    }
+
     renderGrid(currentState.board)
 }
 
@@ -33,15 +37,15 @@ const renderGrid = (board) => {
     const gameOver = !board.includes("");
 
     if (matchingLineX) {
-        showMessage(`Player X has won!!`);
+        showMessage("Player X has won!!");
         xhasWon = true;
     }
     else if (matchingLineO) {
-        showMessage(`Player O has won!!`);
+        showMessage("Player O has won!!");
         ohasWon = true;
     }
-    else if(gameOver){
-        showMessage(`GAME OVER`);
+    else if (gameOver) {
+        showMessage("GAME OVER");
     }
 
     var boxes = board.reduce((acc, curr, idx) => {

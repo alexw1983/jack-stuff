@@ -14,20 +14,17 @@ const getState = () => {
     return null;
 }
 
-const clearState = () => {
+const resetState = () => {
     if (sessionStorage) {
         sessionStorage.clear();
+        setState(INTIAL_STATE);
     }
 }
 
 const switchTurn = () => {
-    if (getCurrentTurn() == X) {
-        setState({ currentTurn: O })
-    } else {
-        setState({ currentTurn: X })
-    }
+    const newTurn = getCurrentTurn() == X ? O : X;
+    setState({ currentTurn: newTurn })
 }
-
 
 const getCurrentTurn = () => {
     return getState().currentTurn;
@@ -45,4 +42,8 @@ const updateBoard = (index) => {
 
 const getCurrentMode = () => {
     return getState().mode;
+}
+
+const updateMode = (newMode) => {
+    setState({ mode: newMode });
 }
