@@ -30,6 +30,7 @@ const renderGrid = (board) => {
     let ohasWon = false;
     const matchingLineX = findMatchingLine(board, X);
     const matchingLineO = findMatchingLine(board, O);
+    const gameOver = !board.includes("");
 
     if (matchingLineX) {
         showMessage(`Player X has won!!`);
@@ -39,12 +40,15 @@ const renderGrid = (board) => {
         showMessage(`Player O has won!!`);
         ohasWon = true;
     }
+    else if(gameOver){
+        showMessage(`GAME OVER`);
+    }
 
     var boxes = board.reduce((acc, curr, idx) => {
         const win = (curr == X && xhasWon && matchingLineX.includes(idx))
             || (curr == O && ohasWon && matchingLineO.includes(idx));
 
-        return [...acc, buildBox(idx, curr, xhasWon || ohasWon, win)]
+        return [...acc, buildBox(idx, curr, gameOver || xhasWon || ohasWon, win)]
     }, []);
 
     for (let i = 0; i < boxes.length; i++) {

@@ -1,26 +1,4 @@
 
-const X = "X";
-const O = "O";
-const NO_MODE = "";
-const ONE_PLAYER_MODE = "1";
-const TWO_PLAYER_MODE = "2";
-
-const winningLines = [
-    // horizontal
-    [0, 1, 2],
-    [3, 4, 5],
-    [6, 7, 8],
-
-    // vertical
-    [0, 3, 6],
-    [1, 4, 7],
-    [2, 5, 8],
-
-    // diagonal
-    [0, 4, 8],
-    [2, 4, 6]
-];
-
 const initialState = {
     mode: NO_MODE,
     currentTurn: X,
