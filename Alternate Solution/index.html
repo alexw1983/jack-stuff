@@ -8,10 +8,24 @@
 
 <body>
     <h1 align="center">Noughts and Crosses</h1>
-    <div id="Banner"></div>
-    <div id="Grid" >
+
+    <div id="Select">
+        <select id="ModeSelect" onchange="selectMode()">
+            <option value="">Please Select</option>
+            <option value="1">1 Player</option>
+            <option value="2">2 Player</option>
+        </select>
     </div>
-    <button onclick="resetGrid()">Reset</button>
+
+    <div id="Board" class="hidden">
+        <div id="Banner"></div>
+        <div id="Grid">
+        </div>
+        <button onclick="resetGrid()">Reset</button>
+    </div>
+
+    <script src="utilities.js"></script>
+    <script src="render.js"></script>
     <script src="main.js"></script>
 </body>
 
