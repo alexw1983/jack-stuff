@@ -1,26 +1,35 @@
-const render = (state) => {
-    toggleBoard(state);
-    showMessage("Current Turn = " + state.currentTurn);
-    renderGrid(state)
+const render = () => {
+    const currentState = getState();
+    toggleBoard(currentState.mode);
+    showMessage("Current Turn = " + currentState.currentTurn);
+    renderGrid(currentState.board)
 }
 
-const toggleBoard = (state) => {
-    if (state.mode > 0) {
-        const board = document.getElementById("Board");
-        const select = document.getElementById("Select");
+const toggleBoard = (mode) => {
+    const board = document.getElementById("Board");
+    const select = document.getElementById("Select");
+
+    if (mode != NO_MODE) {
         board.classList.remove("hidden");
         select.classList.add("hidden");
     }
+    else {
+        board.classList.add("hidden");
+        select.classList.remove("hidden");
+    }
 }
 
-const renderGrid = (state) => {
+const renderGrid = (board) => {
+
+    if (!board) return;
+
     const grid = document.getElementById("Grid");
     grid.innerHTML = "";
 
     let xhasWon = false;
     let ohasWon = false;
-    const matchingLineX = findMatchingLine(state, X);
-    const matchingLineO = findMatchingLine(state, O);
+    const matchingLineX = findMatchingLine(board, X);
+    const matchingLineO = findMatchingLine(board, O);
 
     if (matchingLineX) {
         showMessage(`Player X has won!!`);
@@ -31,10 +40,10 @@ const renderGrid = (state) => {
         ohasWon = true;
     }
 
-    var boxes = state.board.reduce((acc, curr, idx) => {
+    var boxes = board.reduce((acc, curr, idx) => {
         const win = (curr == X && xhasWon && matchingLineX.includes(idx))
             || (curr == O && ohasWon && matchingLineO.includes(idx));
-        
+
         return [...acc, buildBox(idx, curr, xhasWon || ohasWon, win)]
     }, []);
 
