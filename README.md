@@ -26,11 +26,11 @@ When working on a ticket please use the following process. It will make more sen
     1. `git push`
 1. Create a pull request (PR).
     1. Go in to git hub and navigate to your branch.
-    1. There should be a button visible for creating a PR. 
+    1. There should be a button visible for creating a PR.
 
-    ## Alternative to Git Bash
+## Alternative to Git Bash
 
-An aletrnative to using Git Bash is using **VsCode**. This is done in same the same way once you have opened the terminal option in *VsCode*.  With that being said **VsCode** does not run the all of this, it is still completed in the gitbash terminal.  All it does is simply things with it all being in one window 
+An alternative to using Git Bash is using **VsCode**. This is done in same the same way once you have opened the terminal option in *VsCode*.  With that being said **VsCode** does not run the all of this, it is still completed in the gitbash terminal.  All it does is simply things with it all being in one window 
 1. 'git checkout master'
 1. 'git pull'
 1. 'git checkout -b 3-editing-read-me'

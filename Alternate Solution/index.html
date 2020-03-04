@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Noughts and Crosses</title>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+</head>
+
+<body>
+    <h1 align="center">Noughts and Crosses</h1>
+
+    <div id="Select">
+        <select id="ModeSelect" onchange="selectMode()">
+            <option value="">Please Select</option>
+            <option value="1">1 Player</option>
+            <option value="2">2 Player</option>
+        </select>
+    </div>
+
+    <div id="Board" class="hidden">
+        <div id="Banner"></div>
+        <div id="Grid">
+        </div>
+        <button onclick="resetGrid()">Reset</button>
+    </div>
+
+    <script src="scripts/constants.js"></script>
+    <script src="scripts/state.js"></script>
+    <script src="scripts/utilities.js"></script>
+    <script src="scripts/render.js"></script>
+    <script src="scripts/main.js"></script>
+    <script type="application/javascript">
+        resetGrid();
+    </script>
+</body>
+
+</html>
