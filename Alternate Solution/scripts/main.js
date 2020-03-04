@@ -28,7 +28,7 @@ const handleBoxOnClick = (index) => {
 
     switchTurn();
 
-    if (getCurrentMode() == ONE_PLAYER_MODE && getCurrentTurn() == O) {
+    if (getCurrentMode() == ONE_PLAYER_MODE) {
         runAiTurn();
         switchTurn();
     }
