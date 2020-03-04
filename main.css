@@ -22,3 +22,33 @@ body {
   background-color: aqua;
   cursor: pointer;
 }
+
+.button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+  border-radius: 30px;
+  background-color: rgb(6, 67, 136);
+  border: none;
+  color: rgb(13, 216, 6);
+  text-align: center;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 28px;
+  outline: none;
+  padding: 20px;
+  transition: all 0.5s;
+  cursor: pointer;
+  box-shadow: 8px 8px gray;
+}
+
+.button:hover {
+  background-color: rgba(69, 15, 156, 0.664);
+  color: aqua;
+}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
