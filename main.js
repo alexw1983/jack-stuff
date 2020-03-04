@@ -96,4 +96,3 @@ function reset() {
   document.getElementById("box_9").innerHTML = "";
 }
 
-
