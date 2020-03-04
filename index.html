@@ -8,17 +8,24 @@
   <body>
     <h1 align="center">Noughts and Crosses</h1>
     <div class="grid">
-      <div class="box" onclick="handleBoxClick(this)"></div>
-      <div class="box" onclick="handleBoxClick(this)"></div>
-      <div class="box" onclick="handleBoxClick(this)"></div>
-      <div class="box" onclick="handleBoxClick(this)"></div>
-      <div class="box" onclick="handleBoxClick(this)"></div>
-      <div class="box" onclick="handleBoxClick(this)"></div>
-      <div class="box" onclick="handleBoxClick(this)"></div>
-      <div class="box" onclick="handleBoxClick(this)"></div>
-      <div class="box" onclick="handleBoxClick(this)"></div>
+      <div class="box" id="box_1" onclick="handleBoxClick(this)"></div>
+      <div class="box" id="box_2" onclick="handleBoxClick(this)"></div>
+      <div class="box" id="box_3" onclick="handleBoxClick(this)"></div>
+      <div class="box" id="box_4" onclick="handleBoxClick(this)"></div>
+      <div class="box" id="box_5" onclick="handleBoxClick(this)"></div>
+      <div class="box" id="box_6" onclick="handleBoxClick(this)"></div>
+      <div class="box" id="box_7" onclick="handleBoxClick(this)"></div>
+      <div class="box" id="box_8" onclick="handleBoxClick(this)"></div>
+      <div class="box" id="box_9" onclick="handleBoxClick(this)"></div>
     </div>
-    <button id="button1">click me</button>
+    <p>
+      <br />
+    </p>
+
+    <div>
+      <button class="button" onclick="reset()">Reset The Game</button>
+    </div>
+
     <script src="main.js"></script>
   </body>
 </html>
